@@ -6,8 +6,6 @@ There are two versions of the workflow included here, and you can choose the one
 
 ![Alt text](/assets/retool_workflow_chatgpt_demo.gif)
 
-![Alt text](/assets/workflow_canvas.png)
-
 ## Prerequisites
 
 To use these Retool Workflows for ChatGPT SMS interaction, you will need:
@@ -25,6 +23,8 @@ During Smart Block's beta, Retool includes free access to the Smart Block to exp
 The first version of the workflow allows you to send a text message to a Twilio phone number, which triggers a Retool webhook when an incoming text message is received. The contents of this message are then passed on to the SmartBlock, which is a block provided by Retool to call the ChatGPT API. After this, the response is received from ChatGPT, and then sent back to the original sender using the Twilio block. This version of the workflow does not save context, so you cannot have intelligent follow-up conversations with it.
 
 ### Version 2: How it works
+
+![Alt text](/assets/workflow_canvas.png)
 
 The second version of the workflow includes context history using a Retool database, and writing SQL queries to update the database with the prompt and response history from ChatGPT. This version of the workflow enables intelligent follow-up conversations with ChatGPT. The database has the following fields:
 
