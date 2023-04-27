@@ -1,16 +1,20 @@
 # Retool Workflow for ChatGPT SMS Interaction
 
-## About this project
+This project provides a Retool Workflow for ChatGPT SMS interaction, allowing you to communicate with ChatGPT via SMS using a Twilio phone number. 
 
-This project provides a Retool Workflow for ChatGPT SMS interaction, allowing you to communicate with ChatGPT via SMS using a Twilio phone number. There are two versions of the workflow, and you can choose the one that best suits your needs. The first version is simpler and does not save context, while the second version includes context saving using a Retool database.
+There are two versions of the workflow included here, and you can choose the one that best suits your needs. The first version is simpler and does not save context, while the second version includes context saving using a Retool database.
 
 ## Prerequisites
 
-To use this Retool Workflow for ChatGPT SMS interaction, you will need:
+To use these Retool Workflows for ChatGPT SMS interaction, you will need:
 
-- Access to a Twilio account with an active phone number for real-life use case
-- If using version 2 and the SmartBlock, a ChatGPT API key. During Smart Block's beta, Retool is offering free access to the Smart Block to explore GPT-4 applications.
--For version 2, some sort of storage is required to save context history. This Retool workflow utilizes Retool database, which is a built-in PostgreSQL-based database provided by Retool, but it can be any other storage. You would need to edit the workflow accordingly to accommodate to those database/storage resources.
+1. Access to a Twilio account with an active phone number.
+2. For version 2 of the workflow, you would need some sort of storage to save context history. The worklow inlcuded here utilizes Retool database, which is a built-in PostgreSQL-based database provided by Retool, but it can be any other storage. You would need to edit the workflow accordingly to accommodate to those database/storage resources.
+
+## Accessing ChatGPT 
+During Smart Block's beta, Retool includes free access to the Smart Block to explore GPT-4 applications. So, you dont' need to have an API key, but if you'd like to use your own, you can include that in the SmartBlock once you have imported the JSON to your Retool account.
+
+-
 
 ### Version 1: How it works
 
