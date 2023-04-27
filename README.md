@@ -4,6 +4,10 @@ This project provides a Retool Workflow for ChatGPT SMS interaction, allowing yo
 
 There are two versions of the workflow included here, and you can choose the one that best suits your needs. The first version is simpler and does not save context, while the second version includes context saving using a Retool database.
 
+![Alt text](/assets/retool_workflow_chatgpt_demo.gif)
+
+![Alt text](/assets/workflow_canvas.png)
+
 ## Prerequisites
 
 To use these Retool Workflows for ChatGPT SMS interaction, you will need:
@@ -14,7 +18,7 @@ To use these Retool Workflows for ChatGPT SMS interaction, you will need:
 ## Accessing ChatGPT 
 During Smart Block's beta, Retool includes free access to the Smart Block to explore GPT-4 applications. So, you dont' need to have an API key, but if you'd like to use your own, you can include that in the SmartBlock once you have imported the JSON to your Retool account.
 
--
+---
 
 ### Version 1: How it works
 
