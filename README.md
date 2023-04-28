@@ -1,8 +1,8 @@
 # Retool Workflow for ChatGPT SMS Interaction
 
-This project provides a Retool Workflow for ChatGPT SMS interaction, allowing you to communicate with ChatGPT via SMS using a Twilio phone number. 
+This project provides a [Retool Workflow](https://retool.com/products/workflows/) for ChatGPT SMS interaction, allowing you to communicate with ChatGPT via SMS using a Twilio phone number. 
 
-There are two versions of the workflow included here, and you can choose the one that best suits your needs. The first version is simpler and does not save context, while the second version includes context saving using a Retool database.
+There are two versions of the workflow included here, and you can choose the one that best suits your needs. The first version is simpler and does not save context, while the second version includes context saving using a [Retool database](https://retool.com/products/database)
 
 1. v1 (Basic): Start with this version if you just want to try out ChatGPT SMS interaction without saving context history. 
 2. v2 (Advanced): Use this version if you want to save context history and enable intelligent follow-up conversations with ChatGPT. You would need to setup a data storage (this workflow uses Retool Database by default, but you can choose a data storage of your choice. Here's a list of native [data integrations](https://retool.com/integrations/) supported by Retool.)
@@ -13,21 +13,20 @@ There are two versions of the workflow included here, and you can choose the one
 
 To use these Retool Workflows for ChatGPT SMS interaction, you will need:
 
-1. Access to a Twilio account with an active phone number.
-2. For version 2 of the workflow, you would need some sort of storage to save context history. The worklow inlcuded here utilizes Retool database, which is a built-in PostgreSQL-based database provided by Retool, but it can be any other storage. You would need to edit the workflow accordingly to accommodate to those database/storage resources.
+1. Access to a [Twilio](https://www.twilio.com/en-us/messaging/channels/sms) account with an active phone number.
+2. For version 2 of the workflow, you would need some sort of storage to save context history. The worklow inlcuded here utilizes [Retool database](https://retool.com/products/database), which is a built-in PostgreSQL-based database provided by Retool, but it can be any other storage. You would need to edit the workflow accordingly to accommodate to those database/storage resources.
 
 
 ## Importing the Workflow into Retool and Configuring the Twilio Blocks
 To use the Retool Workflow for ChatGPT SMS interaction, you will need to import the workflow JSON file into your Retool account and configure the Twilio blocks. Here's how you can do it:
 
-1. Download the JSON file for the workflow version that you want to use from the GitHub repository.
+1. Download the JSON file for the workflow version that you want to use from this GitHub repository.
 2. Log in to your Retool account and navigate to the Workflows section.
 3. Click on New -> Import from JSON, and select the downloaded JSON file.
 4. Open the imported workflow and navigate to the Twilio block (there are two of them, and you will need to edit them both)
 5. Enter your Twilio Account SID and From phone number in the Configuration section.
-6. Save the changes and you're done.
-7. Now you can test the workflow by sending a text message to the configured Twilio phone number and checking the response in the Retool workflow.
-8. Copy the URL provided by the Workflow as part of the Start Trigger Block. You will need to paste this into your Twilio phone number webhhok configuration. See next section. 
+6. Copy the URL provided by the Workflow as part of the Start Trigger Block. You will need to paste this into your Twilio phone number webhhok configuration. See next section. 
+9. Enable the workflow, and hit Deploy.
 
 ## Configuring a Twilio Phone Number and Webhook
 To use the Retool Workflow for ChatGPT SMS interaction, you will need to configure a Twilio phone number and direct the webhook to the URL provided by the Retool workflow. Here's how you can do it:
@@ -37,6 +36,8 @@ To use the Retool Workflow for ChatGPT SMS interaction, you will need to configu
 3. Scroll down to the Messaging section and under A MESSAGE COMES IN, select Webhook from the dropdown menu
 4. Paste the Retool webook URL (see previous section) into the Webhook URL field in the Twilio configuration.
 5. Save the configuration and you're done.
+
+Now you can test the workflow by sending a text message to the configured Twilio phone number and checking the response in the Retool workflow.
 
 ## Creating the table in Retool Database (required for v2 workflow only)
 To use version 2 of the workflow, you will need to configure the Retool database with the fields mentioned above. 
