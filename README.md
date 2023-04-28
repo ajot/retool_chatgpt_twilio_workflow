@@ -68,6 +68,7 @@ CREATE TABLE chat_log (
     updated_at TIMESTAMPTZ
 );
 ```
+![Alt text](https://github.com/ajot/retool_chatgpt_twilio_workflow/blob/main/CleanShot%202023-04-28%20at%2009.29.41.png)
 
 3. Create the table by importing [this CSV file](https://github.com/ajot/retool_chatgpt_twilio_workflow/blob/main/retool_chatgpt_log_database_template.csv).
 
