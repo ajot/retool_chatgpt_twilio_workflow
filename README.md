@@ -4,9 +4,8 @@ This project provides a Retool Workflow for ChatGPT SMS interaction, allowing yo
 
 There are two versions of the workflow included here, and you can choose the one that best suits your needs. The first version is simpler and does not save context, while the second version includes context saving using a Retool database.
 
-v1: Start with this version if you just want to try out ChatGPT SMS interaction without saving context history. 
-
-v2: Use this version if you want to save context history and enable intelligent follow-up conversations with ChatGPT.
+1. v1 (Basic): Start with this version if you just want to try out ChatGPT SMS interaction without saving context history. 
+2. v2 (Advanced): Use this version if you want to save context history and enable intelligent follow-up conversations with ChatGPT. You would need to setup a data storage (this workflow uses Retool Database by default, but you can choose a data storage of your choice. Here's a list of native [data integrations](https://retool.com/integrations/) supported by Retool.)
 
 ![Alt text](/assets/retool_workflow_chatgpt_demo.gif)
 
