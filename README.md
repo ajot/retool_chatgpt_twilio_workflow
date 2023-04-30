@@ -29,7 +29,40 @@ To use the Retool Workflow for ChatGPT SMS interaction, you will need to import 
 9. Enable the workflow, and hit Deploy.
 
 ## Configuring a Twilio Phone Number and Webhook
-To use the Retool Workflow for ChatGPT SMS interaction, you will need to configure a Twilio phone number and direct the webhook to the URL provided by the Retool workflow. Here's how you can do it:
+To use the Retool Workflow for ChatGPT SMS interaction, you will need to configure a Twilio phone number and direct the webhook to the URL provided by the Retool workflow. 
+
+When a message comes in to Twilio for that phone number, [Twilio will send](https://www.twilio.com/docs/usage/webhooks/sms-webhooks) either an HTTP POST or an HTTP GET request to the URL you specify while configuring the Twilio phone number. When your web service (in this case, our Retool workflow) receives a request from Twilio, all of the information about that incoming message is sent in either the POST body or the GET query parameters.
+
+Here's what a sample JSON resopnse from Twilio to Retool workflow looks like - 
+```
+{
+  "account_sid": "ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "api_version": "2010-04-01",
+  "body": "McAvoy or Stewart? These timelines can get so confusing.",
+  "date_created": "Thu, 30 Jul 2015 20:12:31 +0000",
+  "date_sent": "Thu, 30 Jul 2015 20:12:33 +0000",
+  "date_updated": "Thu, 30 Jul 2015 20:12:33 +0000",
+  "direction": "outbound-api",
+  "error_code": null,
+  "error_message": null,
+  "from": "+15017122661",
+  "messaging_service_sid": "MGXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "num_media": "0",
+  "num_segments": "1",
+  "price": null,
+  "price_unit": null,
+  "sid": "SMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+  "status": "sent",
+  "subresource_uris": {
+    "media": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages/SMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Media.json"
+  },
+  "to": "+15558675310",
+  "uri": "/2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages/SMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.json"
+}
+```
+
+
+Here's how you can configure the Twilio webhook to point to your Retool workflow:
 
 1. Log in to your Twilio account and navigate to the Phone Numbers section.
 2. If you don't have a phone number, click on Buy a Number and follow the instructions to purchase a new phone number. If you already have a phone number, click on it to edit its configuration.
